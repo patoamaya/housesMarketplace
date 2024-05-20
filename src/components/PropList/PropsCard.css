@@ -1,0 +1,158 @@
+
+.propsCardContainer{
+    display: flex;
+    /* color: rgba(255, 255, 255, 0.74); */
+    color: black;
+    
+        
+}
+
+.propCardContainer{
+    display: flex;
+    margin: 10px;
+    width:1030px;
+    height: 250px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    background-color: #595963d0;
+    box-shadow: -3px 3px 21px 12px rgba(0,0,0,0.37);
+    -webkit-box-shadow: -3px 3px 21px 12px rgba(0,0,0,0.37);
+    -moz-box-shadow: -3px 3px 21px 12px rgba(0,0,0,0.37);
+}
+
+.propsImgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 550px;
+    cursor: pointer;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.infosContainer{
+    width: 100%;
+    height: 100%;
+    
+}
+.propsCardInfo1{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    padding-left: 9px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.452);
+    /* background-color: rgb(104, 16, 16); */
+}
+
+h2{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 5px;
+    
+}
+
+.propsCardInfo2Container{
+    display: flex;
+    flex-direction: column;
+    margin-left: -18px;
+    /* flex-wrap: wrap; */
+}
+
+.info2H3{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    align-items: flex-start;
+    gap: 10px;
+    
+}
+
+.info2P{
+    display: flex;
+    width:fit-content ;
+    margin-left: -30px;
+}
+
+ul li{
+    margin-right: 40px;
+}
+
+.vendedor{
+    font-size: 25px;
+    font-weight: 700 ;
+    margin-top: 10px;
+    /* color: rgb(172, 155, 82); */
+}
+
+
+/* .propsCardInfo2Container p{
+    font-size: 18px;
+} */
+
+
+/* card vertical */
+/* .propCardContainer{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 300px;
+    height: 420px;
+    border-radius: 25px;
+    border: 1px solid rgba(0, 0, 0, 0.226);
+    background-color: #181b20;;}
+
+.propsImgContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 170px;
+}
+.img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.propsCardInfo1{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding-left: 5px;
+    margin-bottom: 3px;
+    background-color: rgb(104, 16, 16);
+}
+h2{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    margin-top: 5px;
+    
+}
+
+.propsCardInfo2Container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+    flex-wrap: wrap;
+}
+
+.propsCardInfo2Container p{
+    font-size: 18px;
+} */

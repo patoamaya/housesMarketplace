@@ -1,0 +1,17 @@
+.footer-outlet{
+    /* display: flex; */
+    min-height: 100%;
+    align-items: end;
+}
+
+
+.footer-container{
+    height: 100%;
+    
+}
+.footer{
+    background-color: #181B20;
+    display: flex;
+    justify-self: end;
+    height: 4rem;
+}
