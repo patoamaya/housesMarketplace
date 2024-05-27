@@ -62,7 +62,7 @@ const SearchContextProvider = ({children}) => {
     })
    e.preventDefault()
   }
-  // console.log(objData)
+  console.log(objData)
   
   let data={
     handleOperationSelect, handleAmb, handleCurrency, handleMaxPrice, handleMinPrice, handlePropSelect, handleSubmit, handleUbication, objData

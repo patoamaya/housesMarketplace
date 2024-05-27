@@ -7,7 +7,7 @@ import { SearchContext } from '../../context/SearchContext'
 
 
 const PropListContainer = () => {
-const {objData} = useContext(SearchContext)
+const {objData, propSelect, setPropSelect, amb, setAmb, ubication, setUbication, currency, setCurrency, minPrice, setMinPrice, maxPrice, setMaxPrice} = useContext(SearchContext)
 const [propiedades, setPropiedades] = useState([])
 
 // let {operacion, propiedad, ambientes, ubicacion, moneda, precioMax, precioMin, propiedad, ubicacion} = objData
@@ -19,35 +19,55 @@ const [propiedades, setPropiedades] = useState([])
 
 // }
 
+// console.log(data)
 
 useEffect(()=>{
-    let filtrado = data.filter((propiedad) =>
+    // let propType = data.filter((propiedad)=>{
+    //     propiedad.propiedad === objData.propiedad
+    // })
+    let ambiente = data.filter((propiedad) =>
 
-        // propiedad.propiedad === objData.propiedad
         propiedad.ambientes === +objData.ambientes 
-        // propiedad.ubicacion === objData.ubicacion
-        // propiedad.moneda === objData.moneda
-        // propiedad.precioMin === objData.precioMin
-        // propiedad.precioMax === objData.precioMax
+        
+    )
     
-        )
-        console.log(filtrado)
-        setPropiedades(filtrado)
+    
+    let ubicacion = data.filter((propiedad)=>
+        propiedad.localidad === objData.ubicacion
+        
+    )
+    
+    let moneda = data.filter((propiedad)=>
+        
+        propiedad.moneda === objData.moneda
+
         
         
+    )
+    
+    let minPrice = data.filter((propiedad)=>
+        propiedad.precio <= +objData.precioMin
+        
+    )
+    
+    let maxPrice = data.filter((propiedad)=>
+        propiedad.precio >= +objData.precioMax
+    )
+    
+    
+    // setPropSelect(propType)
+    // setAmb(ambiente)
+    // setUbication(ubicacion) 
+    // setCurrency(moneda)  
+    // setMinPrice(precioMin)  
+    // setMaxPrice(precioMax)
+
+    setPropiedades()
+
         
     },[])
 
-// useEffect(()=>{
-//     let dato = data.map((prop)=>{
-//         return prop
-//     })
-    
-//     setPropiedades(dato)
-// },[data])
 
-    
-    // console.log(objData)
 
 
   return (
