@@ -8,6 +8,7 @@ import { SearchContext } from '../../context/SearchContext'
 
 const PropListContainer = () => {
 const {objData, propSelect, setPropSelect, amb, setAmb, ubication, setUbication, currency, setCurrency, minPrice, setMinPrice, maxPrice, setMaxPrice} = useContext(SearchContext)
+const [filteredProps, setFilteredProps] = useState({})
 const [propiedades, setPropiedades] = useState([])
 
 // let {operacion, propiedad, ambientes, ubicacion, moneda, precioMax, precioMin, propiedad, ubicacion} = objData
@@ -22,12 +23,12 @@ const [propiedades, setPropiedades] = useState([])
 // console.log(data)
 
 useEffect(()=>{
-    // let propType = data.filter((propiedad)=>{
-    //     propiedad.propiedad === objData.propiedad
-    // })
+    let propType = data.filter((propiedad)=>
+        propiedad.propiedad === objData.propiedad
+    )
     let ambiente = data.filter((propiedad) =>
 
-        propiedad.ambientes === +objData.ambientes 
+        propiedad.ambientes === +objData.ambientes
         
     )
     
@@ -61,7 +62,8 @@ useEffect(()=>{
     // setCurrency(moneda)  
     // setMinPrice(precioMin)  
     // setMaxPrice(precioMax)
-
+    setFilteredProps({propType, ambiente, ubicacion, moneda, minPrice, maxPrice})
+    console.log(filteredProps)
     setPropiedades()
 
         
