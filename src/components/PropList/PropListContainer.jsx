@@ -11,18 +11,17 @@ const {objData, propSelect, setPropSelect, amb, setAmb, ubication, setUbication,
 const [filteredProps, setFilteredProps] = useState({})
 const [propiedades, setPropiedades] = useState([])
 
-// let {operacion, propiedad, ambientes, ubicacion, moneda, precioMax, precioMin, propiedad, ubicacion} = objData
-
-// let filteredProducts = (filtrado, data, propiedad, propValue)=>{
-//     let filtrado = data.filter((propiedad)=>{
-//         propiedad.propValue === objData.propValue
-//     })
-
-// }
-
-// console.log(data)
-
 useEffect(()=>{
+    
+    
+    const database = ()=>{
+        data.map((e)=>
+    console.log(Object.values(e)))
+    }
+    database()
+
+    
+
     let propType = data.filter((propiedad)=>
         propiedad.propiedad === objData.propiedad
     )
@@ -33,38 +32,34 @@ useEffect(()=>{
     )
     
     
-    let ubicacion = data.filter((propiedad)=>
-        propiedad.localidad === objData.ubicacion
+    // let ubicacion = data.filter((propiedad)=>
+    //     propiedad.localidad === objData.ubicacion
         
-    )
+    // )
     
-    let moneda = data.filter((propiedad)=>
+    // let moneda = data.filter((propiedad)=>
         
-        propiedad.moneda === objData.moneda
+    //     propiedad.moneda === objData.moneda
 
         
         
-    )
+    // )
     
-    let minPrice = data.filter((propiedad)=>
-        propiedad.precio <= +objData.precioMin
+    // let minPrice = data.filter((propiedad)=>
+    //     propiedad.precio <= +objData.precioMin
         
-    )
+    // )
     
-    let maxPrice = data.filter((propiedad)=>
-        propiedad.precio >= +objData.precioMax
-    )
+    // let maxPrice = data.filter((propiedad)=>
+    //     propiedad.precio >= +objData.precioMax
+    // )
     
     
-    // setPropSelect(propType)
-    // setAmb(ambiente)
-    // setUbication(ubicacion) 
-    // setCurrency(moneda)  
-    // setMinPrice(precioMin)  
-    // setMaxPrice(precioMax)
-    setFilteredProps({propType, ambiente, ubicacion, moneda, minPrice, maxPrice})
-    console.log(filteredProps)
-    setPropiedades()
+
+        // setFilteredProps(propType, ambiente, ubicacion, moneda, minPrice, maxPrice)
+        
+        setPropiedades(ambiente)
+       
 
         
     },[])

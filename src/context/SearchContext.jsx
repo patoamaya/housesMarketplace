@@ -50,18 +50,30 @@ const SearchContextProvider = ({children}) => {
 
   
   const handleSubmit = (e)=>{
-     
+
+    // e.target.map((f)=>{
+    //   console.log(f)
+    // }
+    // )
+
+    
+    // console.log(nuevoArray)
+    // console.log((e.target[0].name))
+    // console.log((e.target[1].value))
+    
     setObjData({
-      "operacion": operationSelect,
-      "propiedad": propSelect,
-      "ambientes": amb,
-      "ubicacion": ubication,
-      "moneda": currency,
-      "precioMin" : minPrice,
-      "precioMax" : maxPrice, 
+      operacion: operationSelect,
+      propiedad: propSelect,  
+      ambientes: amb,
+      ubicacion: ubication,
+      moneda: currency,
+      precioMin : minPrice,
+      precioMax : maxPrice, 
     })
-   e.preventDefault()
+    // console.log(objData )
+    e.preventDefault()
   }
+  console.log(Object.values(objData))
   // console.log(objData)
   
   let data={

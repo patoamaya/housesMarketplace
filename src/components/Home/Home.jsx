@@ -65,7 +65,7 @@ const navigate = useNavigate()
                 className='currency-select'
                 
                 >
-                <option value="$">$</option>
+                <option value="peso">$</option>
                 <option value="u$s">US$</option>
               </select>
 

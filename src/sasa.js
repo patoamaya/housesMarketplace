@@ -1,5 +1,5 @@
 
-export const data = [
+const data = [
 
     {
         id: 1,
@@ -185,4 +185,32 @@ export const data = [
         
     }
     
-]   
+] 
+
+const myObject = {
+  propiedad : "casa",
+  ubicacion : "Banfield",
+  zona : "Sur"
+}
+
+
+const props = data.map((propiedad)=>
+        // console.log(Object.keys(propiedad)))
+        console.log(Object.values(propiedad)))
+ 
+
+console.log(Object.keys(myObject))
+console.log(Object.values(myObject))
+                       
+
+// var filteredObject = Object.keys(myObject).reduce(function(r, e) {
+//   console.log(r)
+//   if (data.includes(myObject[e])){.
+    
+//   } 
+//   r[e] = myObject[e]
+//   return r;
+// }, {})
+
+// console.log(filteredObject)
+// // data.map(e=> e.precio)
