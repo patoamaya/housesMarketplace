@@ -4,32 +4,29 @@ import {data} from '../../db'
 import PropsCard from './PropsCard'
 import './PropsList.css'
 import { SearchContext } from '../../context/SearchContext'
-
-
 const PropListContainer = () => {
-const {objData, propSelect, setPropSelect, amb, setAmb, ubication, setUbication, currency, setCurrency, minPrice, setMinPrice, maxPrice, setMaxPrice} = useContext(SearchContext)
-const [filteredProps, setFilteredProps] = useState({})
-const [propiedades, setPropiedades] = useState([])
+const {result} = useContext(SearchContext)
 
-useEffect(()=>{
+
+// useEffect(()=>{
     
     
-    const database = ()=>{
-        data.map((e)=>
-    console.log(Object.values(e)))
-    }
-    database()
+    // const database = ()=>{
+    //     data.map((e)=>
+    // console.log(Object.values(e)))
+    // }
+    // database()
 
     
 
-    let propType = data.filter((propiedad)=>
-        propiedad.propiedad === objData.propiedad
-    )
-    let ambiente = data.filter((propiedad) =>
+    // let propType = data.filter((propiedad)=>
+    //     propiedad.propiedad === objData.propiedad
+    // )
+    // let ambiente = data.filter((propiedad) =>
 
-        propiedad.ambientes === +objData.ambientes
+    //     propiedad.ambientes === +objData.ambientes
         
-    )
+    // )
     
     
     // let ubicacion = data.filter((propiedad)=>
@@ -58,11 +55,11 @@ useEffect(()=>{
 
         // setFilteredProps(propType, ambiente, ubicacion, moneda, minPrice, maxPrice)
         
-        setPropiedades(ambiente)
+        // setPropiedades(ambiente)
        
 
         
-    },[])
+    // },[])
 
 
 
@@ -71,11 +68,11 @@ useEffect(()=>{
     <div className='propListContainer'>
 
     <div >
-    <ListSidebar props={propiedades}/>
+    <ListSidebar props={result}/>
     </div>
     <div className="cards">
 
-    <PropsCard props={propiedades}/>
+    <PropsCard props={result}/>
     </div>
         </div>
     )
